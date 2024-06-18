@@ -4,13 +4,11 @@ using Microsoft.EntityFrameworkCore;
 namespace Api.Data
 {
     public class Contexto : DbContext
-    {
+    {   
         public Contexto(DbContextOptions<Contexto> options) : base(options)
         {
-
         }
         public DbSet<UsuarioModel> Usuario { get; set; }
-
         public DbSet<AnimaisModel> Animais { get; set; }
         public DbSet<ObservacoesModel> Observacoes { get; set; }
 

@@ -47,12 +47,13 @@ namespace Api.Repositorios
                 animais.AnimalCor = animal.AnimalCor;
                 animais.AnimalSexo = animal.AnimalSexo;
                 animais.AnimalFoto = animal.AnimalFoto;
+                animais.AnimalObservacao = animal.AnimalFoto;
                 animais.AnimalDtDesaparecimento = animal.AnimalDtDesaparecimento;
                 animais.AnimalDtEncontro = animal.AnimalDtEncontro;
                 animais.AnimalStatus = animal.AnimalStatus;
                 animais.UsuarioId = animal.UsuarioId;
 
-                _dbContext.Animais.Update(animal);
+                _dbContext.Animais.Update(animais);
                 await _dbContext.SaveChangesAsync();
             }
             return animais;

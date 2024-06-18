@@ -16,6 +16,8 @@
 
         public string AnimalFoto { get; set; } = string.Empty;
 
+        public string AnimalObservacao { get; set; } = string.Empty;
+
         public DateTime AnimalDtDesaparecimento { get; set; }
 
         public DateTime? AnimalDtEncontro{ get; set; }

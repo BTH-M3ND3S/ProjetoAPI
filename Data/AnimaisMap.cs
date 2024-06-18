@@ -15,6 +15,7 @@ namespace Api.Data
             builder.Property(x => x.AnimalCor).IsRequired().HasMaxLength(255);
             builder.Property(x => x.AnimalSexo).IsRequired().HasMaxLength(255);
             builder.Property(x => x.AnimalFoto).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.AnimalObservacao).IsRequired().HasMaxLength(255);
             builder.Property(x => x.AnimalDtDesaparecimento).IsRequired().HasMaxLength(255);
             builder.Property(x => x.AnimalDtEncontro).IsRequired().HasMaxLength(255);
             builder.Property(x => x.AnimalStatus).IsRequired().HasMaxLength(255);

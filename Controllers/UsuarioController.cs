@@ -31,8 +31,15 @@ namespace Api.Controllers
             return Ok(usuario);
         }
 
+        [HttpPost("Login")]
+        public async Task<ActionResult<List<UsuarioModel>>> Login([FromBody]UsuarioModel usuarioModel)
+        {
+            UsuarioModel usuario = await _usuarioRepositorio.Login(usuarioModel.UsuarioEmail, usuarioModel.UsuarioSenha);
+            return Ok(usuario);
+        }
+
         [HttpPost("CreateUser")]
-        public async Task<ActionResult<UsuarioModel>> InsertUsuario([FromBody]UsuarioModel usuarioModel)
+        public async Task<ActionResult<UsuarioModel>> InsertUsuario([FromBody] UsuarioModel usuarioModel)
         {
             UsuarioModel usuario = await _usuarioRepositorio.InsertUsuario(usuarioModel);
             return Ok(usuario);
